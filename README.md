@@ -14,7 +14,7 @@
 - 🛠️ **Flexible API** - Works with any paginated API endpoint
 - 🔌 **Framework Agnostic** - Works with any React-based application
 
-## 📦 Installation
+## 📦 Installation 
 
 ```bash
 npm install @mutasimalmu/use-paginated-list-query
