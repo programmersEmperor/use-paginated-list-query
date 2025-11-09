@@ -1,2 +1,3 @@
 export { default } from "./usePaginatedList";
-export * from "./type";
+export { default as usePaginatedList } from "./usePaginatedList";
+export type * from "./type";
