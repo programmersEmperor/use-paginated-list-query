@@ -150,6 +150,10 @@ function usePaginatedList<T extends FetchMethod>(args: Props<T>) : PaginatedList
 	const debouncedFetchMethod = debounce(args.fetchMethod, args.debounceTime ?? 500);
 
 	useEffect(() => {
+		changePage(1);
+	}, [state.filters]);
+
+	useEffect(() => {
 		fetchData();
 
 		return () => {
@@ -158,7 +162,6 @@ function usePaginatedList<T extends FetchMethod>(args: Props<T>) : PaginatedList
 	}, [state.page, state.filters, args.disabled]);
 
 
-	
 	async function fetchData() {
 		if (args.disabled) {
 			return;
