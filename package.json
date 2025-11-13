@@ -26,6 +26,10 @@
   ],
   "author": "Mutasim Al-Mualimi <mutasim.business2020@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/programmersEmperor/use-paginated-list-query"
+  },
   "dependencies": {
     "debounce-promise": "^3.1.2"
   },

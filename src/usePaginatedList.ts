@@ -91,6 +91,7 @@ function reducer<T, F>(state: State<T, F>, action: Action<T, F>): State<T, F> {
 				filters: {
                     ...state.filters,
                     ...action.filters,
+					page: 1,
                 },
 			};
 		case "fetch-error":
@@ -148,10 +149,6 @@ function usePaginatedList<T extends FetchMethod>(args: Props<T>) : PaginatedList
 		...(args.initialState ?? {}),
 	} as State<FetchMethodResult<T>, FetchMethodFilter<T>>);
 	const debouncedFetchMethod = debounce(args.fetchMethod, args.debounceTime ?? 500);
-
-	useEffect(() => {
-		changePage(1);
-	}, [state.filters]);
 
 	useEffect(() => {
 		fetchData();
